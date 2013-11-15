@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+	h3= title
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		a(href="/users") back to list
+	hr
+	div.col-lg-5
+		form#add_users(name="add_users", action="/users", method="post", role="form", novalidate="novalidate")
+			div.form-group
+				label	Name
+				input(type="text", name="name", class="form-control", data-rule-required="true", data-msg-required="Please enter name")
+			div.form-group
+				label	Email
+				input(type="text", name="email", class="form-control", data-rule-required="true", data-rule-email="true", data-msg-required="Please enter email address", data-msg-email="Please enter a valid email address")
+			input(type="submit", value="Save", class="btn btn-default")

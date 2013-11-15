@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+	h3=	title
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		a(href="/users") back to list
+	hr
+	div
+	table(class="table table-bordered table-striped")
+		tr
+			th(colspan="2")	User details
+		tr
+			td	Id
+			td=	user.id
+		tr
+			td	Name
+			td=	user.name
+		tr
+			td	Email
+			td=	user.email

@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+	h3= title + ' list'
+	hr
+	a(href="/users/new", class="btn btn-default")	Add new user
+	hr
+	table(class="table table-bordered table-striped")
+		tr
+			th	Id
+			th	Name
+			th	Email
+			th
+			th
+			th
+
+		for user in users
+			tr
+				td=	user.id
+				td=	user.name
+				td=	user.email
+				td(align="center")
+					a(href="/users/#{user.id}", class="btn btn-default")	View
+				td(align="center")
+					a(href="/users/#{user.id}/edit", class="btn btn-default")	Edit
+				td(align="center")
+					a(href="/users/#{user.id}", class="btn btn-danger", data-confirm="Are you sure to delete this record?", data-method="delete", rel="nofollow")	Delete
