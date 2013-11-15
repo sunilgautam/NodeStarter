@@ -1,0 +1,4 @@
+NodeStarter
+===========
+
+A nodejs application
